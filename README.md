@@ -85,7 +85,3 @@ It must never be used to silently fill a paper's missing task, version, label co
 ## License
 
 MIT.
-
-## Citation
-
-Edit `CITATION.cff` with your GitHub username and author information before publishing.
