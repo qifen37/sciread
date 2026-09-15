@@ -62,17 +62,3 @@ SciRead/
 它们不是用来直接复制内容的。
 
 所有新论文仍必须重新从原文读取 Task、Contribution、Method、Experiment 和 Case Study。
-
-## 开源前
-
-请修改 `CITATION.cff`：
-- `YOUR_USERNAME`
-- 作者信息
-
-然后运行：
-
-```bash
-python scripts/validate.py
-```
-
-通过后再提交 GitHub。
