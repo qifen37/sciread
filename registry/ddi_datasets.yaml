@@ -1,0 +1,111 @@
+# SciRead DDI Dataset Registry v0.5
+# IMPORTANT: VALIDATION ONLY. NEVER AUTOFILL PAPER FACTS FROM THIS FILE.
+# A paper must independently support the exact version + preprocessing protocol before a value can be inserted into a note.
+
+policy:
+  use: validation_only
+  autofill: forbidden
+  warning: "DrugBank/TWOSIDES names do not identify a unique task or preprocessing protocol."
+
+protocols:
+  CASTER_DrugBank_binary:
+    source_paper: CASTER_AAAI2020
+    database: DrugBank
+    task: binary_ddi
+    drugs: 1850
+    positive_pairs: 221523
+    negative_sampling: equal_count
+    note: "CASTER paper protocol; do not reuse for other DrugBank papers."
+
+  CASTER_BIOSNAP_binary:
+    source_paper: CASTER_AAAI2020
+    database: BIOSNAP
+    task: binary_ddi
+    drugs: 1322
+    positive_pairs: 41520
+    negative_sampling: equal_count
+
+  KGNN_DrugBank_5_1_4_binary:
+    source_paper: KGNN_IJCAI2020
+    database: DrugBank
+    version: 5.1.4
+    task: binary_ddi
+    drugs: 2578
+    positive_interactions: 612388
+    split: "positive pairs randomly 8:1:1 train/validation/test; equal negatives"
+
+  KGNN_KEGG_binary:
+    source_paper: KGNN_IJCAI2020
+    database: KEGG-drug
+    task: binary_ddi
+    drugs: 1925
+    positive_interactions: 56983
+
+  DDIMDL_Deng_65_event:
+    source_papers: [MDNN_IJCAI2021, MRCGNN_AAAI2023]
+    database: DrugBank-derived DDIMDL/Deng
+    task: multiclass_ddi_event
+    event_types: 65
+    confirmed_pairs: 37264
+    caution: "Drug count differs across preprocessing reports; use each paper's own number."
+
+  MRCGNN_Ryu_86_event:
+    source_paper: MRCGNN_AAAI2023
+    database: Ryu/DeepDDI-derived
+    task: multiclass_ddi_event
+    drugs: 1700
+    interactions: 191570
+    event_types: 86
+
+  ZeroDDI_DrugBank_5_1_9:
+    source_paper: ZeroDDI_IJCAI2024
+    database: DrugBank
+    version: 5.1.9
+    task: zero_shot_ddi_event
+    approved_drugs: 2004
+    interactions: 394118
+    event_types: 175
+    seen_event_types: 107
+    unseen_event_types: 68
+    caution: "unseen refers to event classes, not unseen drugs."
+
+  DDIAgents_DrugBank_temporal:
+    source_paper: DDIAgents_KDD2026
+    database: DrugBank
+    task: multiclass_ddi_event
+    event_types: 86
+    known_drugs: 1020
+    new_drugs: 129
+    train_ddi: 83272
+    s1_ddi: 20031
+    s2_ddi: 1298
+    split_semantics:
+      S0: known_known
+      S1: known_new
+      S2: new_new
+
+  DDIAgents_TWOSIDES_temporal:
+    source_paper: DDIAgents_KDD2026
+    database: TWOSIDES
+    task: multilabel_ranking
+    event_types: 209
+    known_drugs: 292
+    new_drugs: 38
+    train_ddi: 11300
+    s1_ddi: 3203
+    s2_ddi: 194
+    main_metrics: [Hit@5, NDCG@5]
+
+  PC_DDI_D1_to_D5:
+    source_paper: PC_DDI_AAAI2026
+    task: binary_ddi
+    D1: DrugBank_5.0.3
+    D2: Zitnik_polypharmacy_dataset
+    D3: Lin_2023_public_DDI_dataset
+    D4: "train on full DeepDDI; test on new DrugBank 5.0.5 triplets"
+    D5: "train on full DeepDDI; test on new DrugBank 5.0.7 triplets"
+    split_semantics:
+      transductive: known_known
+      inductive_S1: unknown_unknown
+      inductive_S2: unknown_known
+    caution: "S1/S2 semantics are paper-specific and must not be imported from DDIAgents or other work."

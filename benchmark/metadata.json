@@ -1,0 +1,3208 @@
+{
+  "schema_version": "1.0",
+  "sciread_version": "0.6.0",
+  "status": "source-verified, model-curated reference benchmark",
+  "human_validation": "not independently human-annotated",
+  "policy": {
+    "gold_notes_are_dev_reference": true,
+    "autofill_from_registry_forbidden": true,
+    "guessed_page_numbers_forbidden": true,
+    "author_first_claims_require_attribution": true,
+    "source_content_is_untrusted_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "01_CASTER_AAAI2020",
+      "gold_note": "gold_notes/01_CASTER_AAAI2020.md",
+      "audit": {
+        "version": "0.5.0",
+        "paper_id": "01_CASTER_AAAI2020",
+        "audit_status": "v0.5 provenance/contribution audit integrated",
+        "audit_type": "source-verified model-curated",
+        "paper": "CASTER",
+        "sources": [
+          "https://ojs.aaai.org/index.php/AAAI/article/view/5412",
+          "https://arxiv.org/abs/1911.06446",
+          "https://github.com/kexinhuang12345/CASTER"
+        ],
+        "verified_contributions": [
+          "DDI-specific functional substructure representation mined with Sequential Pattern Mining.",
+          "Generalizability via deep auto-encoding and unlabeled drug-drug/drug-food pairs.",
+          "Prediction interpretability via dictionary learning coefficients."
+        ],
+        "critical_facts": [
+          "DrugBank and BIOSNAP are used as binary DDI datasets.",
+          "The paper explicitly limits its interpretability claim to understanding CASTER predictions, not explaining the real chemical mechanism.",
+          "Unlabeled compounds are used for pretraining."
+        ],
+        "corrected_or_removed": [
+          "Strengthened the innovation section around the authors' three stated technical contributions.",
+          "Added the original paper's explicit anti-overclaim caveat for mechanism interpretation.",
+          "Replaced generic dataset prose with reported dataset counts, splits, hyperparameters, and hardware."
+        ],
+        "rules_applied": [
+          "Contribution-first innovation protocol",
+          "Task formulation verification",
+          "Dataset/metric/source verification",
+          "Case-study hallucination check",
+          "Strong-claim calibration",
+          "Missing-information abstention"
+        ],
+        "human_validation": "not independently human-annotated",
+        "contribution_map": "benchmark/contribution_maps/01_CASTER_AAAI2020.json",
+        "version_lock": "benchmark/version_locks/01_CASTER_AAAI2020.json",
+        "negative_facts": "benchmark/negative_facts/01_CASTER_AAAI2020.json"
+      },
+      "contribution_map": {
+        "paper_id": "01_CASTER_AAAI2020",
+        "version": "0.5.0",
+        "mapping_policy": "author contribution first; reader decomposition must be explicit",
+        "author_contributions": [
+          {
+            "contribution_id": "C1",
+            "author_claim_paraphrase": "Specialized DDI representation using frequent functional substructures mined with sequential pattern mining",
+            "maps_to_innovation_bullets": [
+              "I1"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C2",
+            "author_claim_paraphrase": "Improved generalizability through structure-only inputs and deep auto-encoding with unlabeled drug-drug/drug-food pairs",
+            "maps_to_innovation_bullets": [
+              "I2"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C3",
+            "author_claim_paraphrase": "Interpretable prediction via dictionary learning projection coefficients",
+            "maps_to_innovation_bullets": [
+              "I3"
+            ],
+            "reader_decomposition": false
+          }
+        ],
+        "innovation_bullets": [
+          {
+            "innovation_id": "I1",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I2",
+            "mapped_contributions": [
+              "C2"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I3",
+            "mapped_contributions": [
+              "C3"
+            ],
+            "mapping_status": "mapped"
+          }
+        ]
+      },
+      "evidence_ledger": [
+        {
+          "claim_id": "C1",
+          "note_section": "创新",
+          "claim": "CASTER uses sequential pattern mining to build a specialized functional-substructure representation.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/5412/5268",
+          "source_version": "AAAI 2020 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — technical contributions",
+          "pdf_page": 2,
+          "proceedings_page": 703,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Contribution paragraph describes specialized DDI representation from frequent functional substructures.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C2",
+          "note_section": "创新",
+          "claim": "CASTER improves generalizability by using unlabeled drug-drug/drug-food pairs in deep auto-encoding.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/5412/5268",
+          "source_version": "AAAI 2020 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — technical contributions",
+          "pdf_page": 2,
+          "proceedings_page": 703,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Contribution paragraph explicitly frames improved generalizability through unlabeled data and structure-only inputs.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C3",
+          "note_section": "创新",
+          "claim": "Dictionary learning coefficients are used for prediction interpretability.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/5412/5268",
+          "source_version": "AAAI 2020 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — technical contributions",
+          "pdf_page": 2,
+          "proceedings_page": 703,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Contribution paragraph presents dictionary learning for interpretability.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "L1",
+          "note_section": "缺点/局限",
+          "claim": "CASTER does not claim its coefficients explain the real chemical mechanism of DDI.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/5412/5268",
+          "source_version": "AAAI 2020 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction footnote/caveat",
+          "pdf_page": 2,
+          "proceedings_page": 703,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Authors explicitly limit the interpretation to understanding CASTER predictions, not the actual chemical process.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "X1",
+          "note_section": "案例分析",
+          "claim": "The case study analyzes Sildenafil with nitrate-based drugs using substructure coefficients.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/5412/5268",
+          "source_version": "AAAI 2020 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Case Study",
+          "pdf_page": 6,
+          "proceedings_page": 707,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Case study begins with Sildenafil and nitrate-based interactions; discussion continues onto the next page.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        }
+      ],
+      "version_lock": {
+        "paper_id": "01_CASTER_AAAI2020",
+        "title": "CASTER: Predicting Drug Interactions with Chemical Substructure Representation",
+        "method": "CASTER",
+        "venue": "AAAI 2020",
+        "doi": "10.1609/aaai.v34i01.5412",
+        "pages": "702-709",
+        "page_count": 8,
+        "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/5412",
+        "evidence_url": "https://ojs.aaai.org/index.php/AAAI/article/download/5412/5268",
+        "source_version": "AAAI proceedings version",
+        "alternate_titles": [],
+        "retrieved_at": "2026-09-15",
+        "content_sha256": null,
+        "hash_status": "remote source not redistributed/materialized in repository; hash intentionally unset",
+        "mixing_rule": "Do not combine conflicting facts across source versions without explicit reconciliation.",
+        "evidence_page_count": 8,
+        "page_numbering_note": "pdf_page is 1-based within the locked evidence source; proceedings_page is printed conference page when verified."
+      },
+      "negative_facts": {
+        "paper_id": "01_CASTER_AAAI2020",
+        "version": "0.5.0",
+        "purpose": "negative evidence / likely hallucination traps",
+        "negative_facts": [
+          {
+            "id": "N1",
+            "category": "mechanism_causality",
+            "must_not_claim": "Do not claim dictionary coefficients prove the real chemical mechanism of DDI.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N2",
+            "category": "kg_usage",
+            "must_not_claim": "Do not add a biomedical knowledge graph; CASTER is structure/substructure based.",
+            "automation": "human_or_semantic_check"
+          }
+        ]
+      },
+      "coverage_spec": {
+        "paper_id": "01_CASTER_AAAI2020",
+        "version": "0.5.0",
+        "required_concepts": [
+          {
+            "concept": "substructure representation",
+            "aliases": [
+              "Sequential Pattern Mining",
+              "functional substructure",
+              "频繁子结构"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "semi-supervised/unlabeled",
+            "aliases": [
+              "unlabeled",
+              "无标签",
+              "auto-encoding",
+              "Auto-Encoder"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "interpretability",
+            "aliases": [
+              "Dictionary Learning",
+              "dictionary coefficients",
+              "字典系数"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "datasets",
+            "aliases": [
+              "BIOSNAP",
+              "DrugBank"
+            ],
+            "min_alias_matches": 1
+          }
+        ],
+        "policy": "Each concept must be represented by at least one alias; this is a regression guard, not a semantic proof of correctness."
+      }
+    },
+    {
+      "paper_id": "02_KGNN_IJCAI2020",
+      "gold_note": "gold_notes/02_KGNN_IJCAI2020.md",
+      "audit": {
+        "version": "0.5.0",
+        "paper_id": "02_KGNN_IJCAI2020",
+        "audit_status": "v0.5 provenance/contribution audit integrated",
+        "audit_type": "source-verified model-curated",
+        "paper": "KGNN",
+        "sources": [
+          "https://www.ijcai.org/proceedings/2020/380",
+          "https://www.ijcai.org/proceedings/2020/0380.pdf",
+          "https://github.com/xzenglab/KGNN"
+        ],
+        "verified_contributions": [
+          "End-to-end Knowledge Graph Neural Network framework for DDI prediction.",
+          "Use of KG topology, neighborhood aggregation, semantic relations, and high-order receptive fields.",
+          "DDI prediction without requiring additional chemical-structure-specific drug representations."
+        ],
+        "critical_facts": [
+          "DrugBank and KEGG-drug are treated as binary DDI prediction datasets.",
+          "The paper uses random train/validation/test splits and equal negative sampling.",
+          "The paper's case/analysis section is primarily parameter and architecture analysis rather than a specific pharmacological mechanism case."
+        ],
+        "corrected_or_removed": [
+          "Removed any implication that KGNN provides a concrete biological mechanism case study.",
+          "Reframed innovation around the paper's explicit KGNN technical highlights rather than generic 'uses KG'."
+        ],
+        "rules_applied": [
+          "Contribution-first innovation protocol",
+          "Task formulation verification",
+          "Dataset/metric/source verification",
+          "Case-study hallucination check",
+          "Strong-claim calibration",
+          "Missing-information abstention"
+        ],
+        "human_validation": "not independently human-annotated",
+        "contribution_map": "benchmark/contribution_maps/02_KGNN_IJCAI2020.json",
+        "version_lock": "benchmark/version_locks/02_KGNN_IJCAI2020.json",
+        "negative_facts": "benchmark/negative_facts/02_KGNN_IJCAI2020.json"
+      },
+      "contribution_map": {
+        "paper_id": "02_KGNN_IJCAI2020",
+        "version": "0.5.0",
+        "mapping_policy": "author contribution first; reader decomposition must be explicit",
+        "author_contributions": [
+          {
+            "contribution_id": "C1",
+            "author_claim_paraphrase": "Propose an end-to-end Knowledge Graph Neural Network framework for DDI prediction; authors state it is the first such KGNN framework to their knowledge",
+            "maps_to_innovation_bullets": [
+              "I1"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C2",
+            "author_claim_paraphrase": "Exploit KG topology, local receptive-field aggregation, high-order structures and semantic relations for drug representation",
+            "maps_to_innovation_bullets": [
+              "I2"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C3",
+            "author_claim_paraphrase": "Demonstrate knowledge-enhanced DDI prediction without requiring a separate chemical-structure representation; experimental evidence supports the framework",
+            "maps_to_innovation_bullets": [
+              "I3"
+            ],
+            "reader_decomposition": true
+          }
+        ],
+        "innovation_bullets": [
+          {
+            "innovation_id": "I1",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I2",
+            "mapped_contributions": [
+              "C2"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I3",
+            "mapped_contributions": [
+              "C3"
+            ],
+            "mapping_status": "mapped"
+          }
+        ]
+      },
+      "evidence_ledger": [
+        {
+          "claim_id": "C1",
+          "note_section": "创新",
+          "claim": "KGNN is proposed as an end-to-end knowledge-graph neural network framework for DDI prediction.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2020/0380.pdf",
+          "source_version": "IJCAI 2020 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 2740,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Contribution paragraph introduces KGNN and attributes first-framework status to the authors knowledge.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C2",
+          "note_section": "创新",
+          "claim": "KGNN uses topology, local neighborhood aggregation, high-order structures and semantic relations.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2020/0380.pdf",
+          "source_version": "IJCAI 2020 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 2740,
+          "locator_precision": "page_exact",
+          "evidence_summary": "The paper summarizes these as technical highlights of KGNN.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "D1",
+          "note_section": "数据集",
+          "claim": "DrugBank v5.1.4 and KEGG-drug are used for binary DDI prediction.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2020/0380.pdf",
+          "source_version": "IJCAI 2020 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Experiments — datasets",
+          "pdf_page": 4,
+          "proceedings_page": 2742,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Dataset section reports DrugBank/KEGG drug and interaction counts.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "S1",
+          "note_section": "实验设置",
+          "claim": "Positive interactions are randomly split 8:1:1 and equal-count negative pairs are sampled.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2020/0380.pdf",
+          "source_version": "IJCAI 2020 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Experiments — settings",
+          "pdf_page": 5,
+          "proceedings_page": 2743,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Experiment protocol states the split and negative sampling.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "X1",
+          "note_section": "案例分析",
+          "claim": "The paper analysis is primarily hyperparameter/model behavior analysis rather than a pharmacological case study.",
+          "evidence_level": "B",
+          "source_url": "https://www.ijcai.org/proceedings/2020/0380.pdf",
+          "source_version": "IJCAI 2020 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Case Study / parameter analysis",
+          "pdf_page": 6,
+          "proceedings_page": 2744,
+          "locator_precision": "page_exact",
+          "evidence_summary": "The named case-study section studies neighborhood size, receptive-field depth, and embedding dimension; no specific drug mechanism case is established.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        }
+      ],
+      "version_lock": {
+        "paper_id": "02_KGNN_IJCAI2020",
+        "title": "KGNN: Knowledge Graph Neural Network for Drug-Drug Interaction Prediction",
+        "method": "KGNN",
+        "venue": "IJCAI 2020",
+        "doi": "10.24963/ijcai.2020/380",
+        "pages": "2739-2745",
+        "page_count": 7,
+        "publisher_url": "https://www.ijcai.org/proceedings/2020/380",
+        "evidence_url": "https://www.ijcai.org/proceedings/2020/0380.pdf",
+        "source_version": "IJCAI proceedings version",
+        "alternate_titles": [],
+        "retrieved_at": "2026-09-15",
+        "content_sha256": null,
+        "hash_status": "remote source not redistributed/materialized in repository; hash intentionally unset",
+        "mixing_rule": "Do not combine conflicting facts across source versions without explicit reconciliation.",
+        "evidence_page_count": 7,
+        "page_numbering_note": "pdf_page is 1-based within the locked evidence source; proceedings_page is printed conference page when verified."
+      },
+      "negative_facts": {
+        "paper_id": "02_KGNN_IJCAI2020",
+        "version": "0.5.0",
+        "purpose": "negative evidence / likely hallucination traps",
+        "negative_facts": [
+          {
+            "id": "N1",
+            "category": "case_study",
+            "must_not_claim": "Do not invent a specific drug-pair pharmacological mechanism case study.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N2",
+            "category": "multiclass",
+            "must_not_claim": "Do not rewrite the paper as 65/86-class event prediction.",
+            "automation": "human_or_semantic_check"
+          }
+        ]
+      },
+      "coverage_spec": {
+        "paper_id": "02_KGNN_IJCAI2020",
+        "version": "0.5.0",
+        "required_concepts": [
+          {
+            "concept": "KG neighborhood",
+            "aliases": [
+              "neighbor",
+              "邻域",
+              "receptive field"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "relations",
+            "aliases": [
+              "semantic relations",
+              "关系语义",
+              "relation"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "datasets",
+            "aliases": [
+              "DrugBank",
+              "KEGG"
+            ],
+            "min_alias_matches": 1
+          }
+        ],
+        "policy": "Each concept must be represented by at least one alias; this is a regression guard, not a semantic proof of correctness."
+      }
+    },
+    {
+      "paper_id": "03_MDNN_IJCAI2021",
+      "gold_note": "gold_notes/03_MDNN_IJCAI2021.md",
+      "audit": {
+        "version": "0.5.0",
+        "paper_id": "03_MDNN_IJCAI2021",
+        "audit_status": "v0.5 provenance/contribution audit integrated",
+        "audit_type": "source-verified model-curated",
+        "paper": "MDNN",
+        "sources": [
+          "https://www.ijcai.org/proceedings/2021/487",
+          "https://www.ijcai.org/proceedings/2021/0487.pdf"
+        ],
+        "verified_contributions": [
+          "Two-pathway multimodal framework combining Drug Knowledge Graph and heterogeneous drug features.",
+          "Joint use of inter-modality similarities and DKG topological/semantic relations.",
+          "Multimodal fusion for DDI event classification."
+        ],
+        "critical_facts": [
+          "The task is 65-class DDI event prediction.",
+          "The dataset contains 572 drugs and 37,264 confirmed drug pairs before symmetric expansion.",
+          "The paper does not provide a standalone drug-mechanism case study; Figure 1 is task motivation."
+        ],
+        "corrected_or_removed": [
+          "Removed a previously over-interpreted 'case study' description.",
+          "Rewrote innovation to mirror the authors' explicit contribution paragraph."
+        ],
+        "rules_applied": [
+          "Contribution-first innovation protocol",
+          "Task formulation verification",
+          "Dataset/metric/source verification",
+          "Case-study hallucination check",
+          "Strong-claim calibration",
+          "Missing-information abstention"
+        ],
+        "human_validation": "not independently human-annotated",
+        "contribution_map": "benchmark/contribution_maps/03_MDNN_IJCAI2021.json",
+        "version_lock": "benchmark/version_locks/03_MDNN_IJCAI2021.json",
+        "negative_facts": "benchmark/negative_facts/03_MDNN_IJCAI2021.json"
+      },
+      "contribution_map": {
+        "paper_id": "03_MDNN_IJCAI2021",
+        "version": "0.5.0",
+        "mapping_policy": "author contribution first; reader decomposition must be explicit",
+        "author_contributions": [
+          {
+            "contribution_id": "C1",
+            "author_claim_paraphrase": "Propose a two-pathway multimodal framework using a Drug Knowledge Graph pathway and Heterogeneous Feature pathway",
+            "maps_to_innovation_bullets": [
+              "I1"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C2",
+            "author_claim_paraphrase": "Learn inter-modality similarities while extracting DKG topological and semantic information",
+            "maps_to_innovation_bullets": [
+              "I2"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C3",
+            "author_claim_paraphrase": "Fuse multimodal representations for DDI event prediction and validate effectiveness experimentally",
+            "maps_to_innovation_bullets": [
+              "I3"
+            ],
+            "reader_decomposition": false
+          }
+        ],
+        "innovation_bullets": [
+          {
+            "innovation_id": "I1",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I2",
+            "mapped_contributions": [
+              "C2"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I3",
+            "mapped_contributions": [
+              "C3"
+            ],
+            "mapping_status": "mapped"
+          }
+        ]
+      },
+      "evidence_ledger": [
+        {
+          "claim_id": "C1",
+          "note_section": "创新",
+          "claim": "MDNN proposes a two-pathway multimodal framework with a Drug Knowledge Graph pathway and a Heterogeneous Feature pathway.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2021/0487.pdf",
+          "source_version": "IJCAI 2021 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 3537,
+          "locator_precision": "page_exact",
+          "evidence_summary": "First contribution defines the two-pathway framework.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C2",
+          "note_section": "创新",
+          "claim": "MDNN learns inter-modality similarities and extracts DKG topology/semantic relations.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2021/0487.pdf",
+          "source_version": "IJCAI 2021 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 3537,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Second contribution describes multimodal similarity plus DKG topological/semantic learning.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "D1",
+          "note_section": "数据集",
+          "claim": "The DDI event dataset contains 572 drugs, 37,264 definite drug pairs and 65 event types.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2021/0487.pdf",
+          "source_version": "IJCAI 2021 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Experiments — dataset",
+          "pdf_page": 5,
+          "proceedings_page": 3540,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Dataset section reports these statistics.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "D2",
+          "note_section": "数据集",
+          "claim": "The DKG is built from DrugBank v5.1.7 and heterogeneous features include target, substructure and enzyme dimensions.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2021/0487.pdf",
+          "source_version": "IJCAI 2021 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Experiments — dataset/features",
+          "pdf_page": 5,
+          "proceedings_page": 3540,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Paper reports DKG and heterogeneous feature statistics.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "X1",
+          "note_section": "案例分析",
+          "claim": "MDNN does not contain a standalone pharmacological case study; the Abemaciclib examples in Figure 1 motivate the task.",
+          "evidence_level": "B",
+          "source_url": "https://www.ijcai.org/proceedings/2021/0487.pdf",
+          "source_version": "IJCAI 2021 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Figure 1 / experiments",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "section_exact",
+          "evidence_summary": "No standalone Case Study heading was found in the paper; Figure 1 illustrates task motivation.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": "pdf_page intentionally unset because this negative/existence claim is section-level."
+        }
+      ],
+      "version_lock": {
+        "paper_id": "03_MDNN_IJCAI2021",
+        "title": "MDNN: A Multimodal Deep Neural Network for Predicting Drug-Drug Interaction Events",
+        "method": "MDNN",
+        "venue": "IJCAI 2021",
+        "doi": "10.24963/ijcai.2021/487",
+        "pages": "3536-3542",
+        "page_count": 7,
+        "publisher_url": "https://www.ijcai.org/proceedings/2021/487",
+        "evidence_url": "https://www.ijcai.org/proceedings/2021/0487.pdf",
+        "source_version": "IJCAI proceedings version",
+        "alternate_titles": [],
+        "retrieved_at": "2026-09-15",
+        "content_sha256": null,
+        "hash_status": "remote source not redistributed/materialized in repository; hash intentionally unset",
+        "mixing_rule": "Do not combine conflicting facts across source versions without explicit reconciliation.",
+        "evidence_page_count": 7,
+        "page_numbering_note": "pdf_page is 1-based within the locked evidence source; proceedings_page is printed conference page when verified."
+      },
+      "negative_facts": {
+        "paper_id": "03_MDNN_IJCAI2021",
+        "version": "0.5.0",
+        "purpose": "negative evidence / likely hallucination traps",
+        "negative_facts": [
+          {
+            "id": "N1",
+            "category": "case_study",
+            "must_not_claim": "Do not treat Figure 1 task-motivation examples as an independent validated mechanism case study.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N2",
+            "category": "cold_start",
+            "must_not_claim": "Do not claim new-drug cold-start results unless explicitly sourced.",
+            "automation": "human_or_semantic_check"
+          }
+        ]
+      },
+      "coverage_spec": {
+        "paper_id": "03_MDNN_IJCAI2021",
+        "version": "0.5.0",
+        "required_concepts": [
+          {
+            "concept": "two pathways",
+            "aliases": [
+              "Drug Knowledge Graph",
+              "DKG",
+              "Heterogeneous Feature"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "features",
+            "aliases": [
+              "target",
+              "substructure",
+              "enzyme"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "events",
+            "aliases": [
+              "65",
+              "DDI event"
+            ],
+            "min_alias_matches": 1
+          }
+        ],
+        "policy": "Each concept must be represented by at least one alias; this is a regression guard, not a semantic proof of correctness."
+      }
+    },
+    {
+      "paper_id": "04_MRCGNN_AAAI2023",
+      "gold_note": "gold_notes/04_MRCGNN_AAAI2023.md",
+      "audit": {
+        "version": "0.5.0",
+        "paper_id": "04_MRCGNN_AAAI2023",
+        "audit_status": "v0.5 provenance/contribution audit integrated",
+        "audit_type": "source-verified model-curated",
+        "paper": "MRCGNN",
+        "sources": [
+          "https://ojs.aaai.org/index.php/AAAI/article/view/25665",
+          "https://github.com/Zhankun-Xiong/MRCGNN"
+        ],
+        "verified_contributions": [
+          "Joint modeling of drug molecular structure and multi-relational DDI event graph.",
+          "Multi-relational graph contrastive learning.",
+          "Dual-view negative counterpart augmentation for rare DDI events."
+        ],
+        "critical_facts": [
+          "Deng's dataset has 570 drugs, 37,264 DDIs and 65 event types.",
+          "Ryu's dataset has 1,700 drugs, 191,570 DDIs and 86 event types.",
+          "Rare-event analysis is a central experimental theme."
+        ],
+        "corrected_or_removed": [
+          "Made rare-event contrastive augmentation the explicit third innovation rather than generic robustness.",
+          "Corrected dataset statistics and emphasized long-tail evaluation."
+        ],
+        "rules_applied": [
+          "Contribution-first innovation protocol",
+          "Task formulation verification",
+          "Dataset/metric/source verification",
+          "Case-study hallucination check",
+          "Strong-claim calibration",
+          "Missing-information abstention"
+        ],
+        "human_validation": "not independently human-annotated",
+        "contribution_map": "benchmark/contribution_maps/04_MRCGNN_AAAI2023.json",
+        "version_lock": "benchmark/version_locks/04_MRCGNN_AAAI2023.json",
+        "negative_facts": "benchmark/negative_facts/04_MRCGNN_AAAI2023.json"
+      },
+      "contribution_map": {
+        "paper_id": "04_MRCGNN_AAAI2023",
+        "version": "0.5.0",
+        "mapping_policy": "author contribution first; reader decomposition must be explicit",
+        "author_contributions": [
+          {
+            "contribution_id": "C1",
+            "author_claim_paraphrase": "Integrate drug structural information and drug interactive information by applying a GNN to a multi-relational DDI event graph attributed with molecular-graph features",
+            "maps_to_innovation_bullets": [
+              "I1"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C2",
+            "author_claim_paraphrase": "Introduce multi-relational graph contrastive learning",
+            "maps_to_innovation_bullets": [
+              "I2"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C3",
+            "author_claim_paraphrase": "Design dual-view negative counterpart augmentation to capture implicit information for rare DDI events",
+            "maps_to_innovation_bullets": [
+              "I3"
+            ],
+            "reader_decomposition": false
+          }
+        ],
+        "innovation_bullets": [
+          {
+            "innovation_id": "I1",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I2",
+            "mapped_contributions": [
+              "C2"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I3",
+            "mapped_contributions": [
+              "C3"
+            ],
+            "mapping_status": "mapped"
+          }
+        ]
+      },
+      "evidence_ledger": [
+        {
+          "claim_id": "C1",
+          "note_section": "创新",
+          "claim": "MRCGNN integrates drug molecular structure and drug interactive information in a multi-relational DDI graph.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25665",
+          "source_version": "AAAI 2023 proceedings metadata / author-accessible preprint for method text",
+          "source_kind": "official_metadata",
+          "paper_section": "Abstract / Introduction",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "section_exact",
+          "evidence_summary": "Official abstract states that the graph is attributed with drug features extracted from molecular graphs.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C2",
+          "note_section": "创新",
+          "claim": "MRCGNN introduces multi-relational graph contrastive learning.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25665",
+          "source_version": "AAAI 2023 proceedings metadata / author-accessible preprint for method text",
+          "source_kind": "official_metadata",
+          "paper_section": "Abstract / Method",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "section_exact",
+          "evidence_summary": "Official abstract explicitly describes multi-relational graph contrastive learning.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C3",
+          "note_section": "创新",
+          "claim": "Dual-view negative counterpart augmentation is designed to capture information for rare DDI events.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25665",
+          "source_version": "AAAI 2023 proceedings metadata / author-accessible preprint for method text",
+          "source_kind": "official_metadata",
+          "paper_section": "Abstract / Method",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "section_exact",
+          "evidence_summary": "Official abstract identifies dual-view negative counterpart augmentation and rare-event motivation.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "D1",
+          "note_section": "数据集",
+          "claim": "The paper evaluates on Deng and Ryu multi-class DDI event datasets.",
+          "evidence_level": "A",
+          "source_url": "https://github.com/Zhankun-Xiong/MRCGNN",
+          "source_version": "AAAI 2023 proceedings metadata / author-accessible preprint for method text",
+          "source_kind": "official_repository",
+          "paper_section": "Dataset directories / experiments",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "source_only",
+          "evidence_summary": "Official repository provides separate Deng and Ryu dataset folders and five-run scripts.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "X1",
+          "note_section": "案例分析",
+          "claim": "Rare-event grouped performance is a core analysis; it should not be rewritten as a concrete drug-mechanism case.",
+          "evidence_level": "B",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25665",
+          "source_version": "AAAI 2023 proceedings metadata / author-accessible preprint for method text",
+          "source_kind": "official_metadata",
+          "paper_section": "Experiments / rare-event analysis",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "section_exact",
+          "evidence_summary": "Abstract explicitly highlights rare DDI-event performance; no source supports inventing a specific drug mechanism case.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        }
+      ],
+      "version_lock": {
+        "paper_id": "04_MRCGNN_AAAI2023",
+        "title": "Multi-Relational Contrastive Learning Graph Neural Network for Drug-Drug Interaction Event Prediction",
+        "method": "MRCGNN",
+        "venue": "AAAI 2023",
+        "doi": "10.1609/aaai.v37i4.25665",
+        "pages": "5339-5347",
+        "page_count": 9,
+        "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25665",
+        "evidence_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25665",
+        "source_version": "AAAI proceedings version; official metadata + public author preprint used where full-text locator needed",
+        "alternate_titles": [],
+        "retrieved_at": "2026-09-15",
+        "content_sha256": null,
+        "hash_status": "remote source not redistributed/materialized in repository; hash intentionally unset",
+        "mixing_rule": "Do not combine conflicting facts across source versions without explicit reconciliation.",
+        "evidence_page_count": 9,
+        "page_numbering_note": "pdf_page is 1-based within the locked evidence source; proceedings_page is printed conference page when verified."
+      },
+      "negative_facts": {
+        "paper_id": "04_MRCGNN_AAAI2023",
+        "version": "0.5.0",
+        "purpose": "negative evidence / likely hallucination traps",
+        "negative_facts": [
+          {
+            "id": "N1",
+            "category": "binary",
+            "must_not_claim": "Do not rewrite the task as binary DDI existence prediction.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N2",
+            "category": "faithfulness",
+            "must_not_claim": "Do not call contrastive/rare-event improvements faithful mechanism explanations.",
+            "automation": "human_or_semantic_check"
+          }
+        ]
+      },
+      "coverage_spec": {
+        "paper_id": "04_MRCGNN_AAAI2023",
+        "version": "0.5.0",
+        "required_concepts": [
+          {
+            "concept": "two information types",
+            "aliases": [
+              "structural information",
+              "interactive information",
+              "分子结构"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "contrastive",
+            "aliases": [
+              "contrastive",
+              "对比学习"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "dual-view",
+            "aliases": [
+              "Dual-View",
+              "negative counterpart"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "rare",
+            "aliases": [
+              "rare",
+              "稀有"
+            ],
+            "min_alias_matches": 1
+          }
+        ],
+        "policy": "Each concept must be represented by at least one alias; this is a regression guard, not a semantic proof of correctness."
+      }
+    },
+    {
+      "paper_id": "05_TIGER_AAAI2024",
+      "gold_note": "gold_notes/05_TIGER_AAAI2024.md",
+      "audit": {
+        "version": "0.5.0",
+        "paper_id": "05_TIGER_AAAI2024",
+        "audit_status": "v0.5 provenance/contribution audit integrated",
+        "audit_type": "source-verified model-curated",
+        "paper": "TIGER",
+        "sources": [
+          "https://ojs.aaai.org/index.php/AAAI/article/view/27777",
+          "https://github.com/Blair1213/TIGER"
+        ],
+        "verified_contributions": [
+          "Dual-channel framework combining graph-level molecular representation and node-level biomedical KG representation.",
+          "Relation-aware self-attention for heterogeneous graph Transformer.",
+          "Drug-centered sampled subgraph processing for high-order and long-range KG dependencies."
+        ],
+        "critical_facts": [
+          "DrugBank, KEGG and OGB-biokg are used.",
+          "The task is link prediction/binary DDI prediction under the original paper protocol.",
+          "The implementation uses sampled drug-centered subgraphs rather than applying Transformer to the entire KG."
+        ],
+        "corrected_or_removed": [
+          "Removed the risk of importing later benchmark formulations into the original TIGER paper.",
+          "Replaced vague dual-channel novelty with the authors' graph-level/node-level distinction and relation-aware attention."
+        ],
+        "rules_applied": [
+          "Contribution-first innovation protocol",
+          "Task formulation verification",
+          "Dataset/metric/source verification",
+          "Case-study hallucination check",
+          "Strong-claim calibration",
+          "Missing-information abstention"
+        ],
+        "human_validation": "not independently human-annotated",
+        "contribution_map": "benchmark/contribution_maps/05_TIGER_AAAI2024.json",
+        "version_lock": "benchmark/version_locks/05_TIGER_AAAI2024.json",
+        "negative_facts": "benchmark/negative_facts/05_TIGER_AAAI2024.json"
+      },
+      "contribution_map": {
+        "paper_id": "05_TIGER_AAAI2024",
+        "version": "0.5.0",
+        "mapping_policy": "author contribution first; reader decomposition must be explicit",
+        "author_contributions": [
+          {
+            "contribution_id": "C1",
+            "author_claim_paraphrase": "Model DDI data with a dual-channel heterogeneous graph approach combining graph-level molecular and node-level biomedical-graph information",
+            "maps_to_innovation_bullets": [
+              "I1"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C2",
+            "author_claim_paraphrase": "Introduce relation-aware self-attention for diverse and multiple semantic relationships",
+            "maps_to_innovation_bullets": [
+              "I2"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C3",
+            "author_claim_paraphrase": "Conduct experiments on three datasets for DDI prediction and mechanism-understanding analysis",
+            "maps_to_innovation_bullets": [
+              "I3"
+            ],
+            "reader_decomposition": true
+          }
+        ],
+        "innovation_bullets": [
+          {
+            "innovation_id": "I1",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I2",
+            "mapped_contributions": [
+              "C2"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I3",
+            "mapped_contributions": [
+              "C3"
+            ],
+            "mapping_status": "mapped"
+          }
+        ]
+      },
+      "evidence_ledger": [
+        {
+          "claim_id": "C1",
+          "note_section": "创新",
+          "claim": "TIGER models DDI using a dual-channel heterogeneous graph approach combining graph-level and node-level representations.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/27777/27592",
+          "source_version": "AAAI 2024 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — main contributions",
+          "pdf_page": 2,
+          "proceedings_page": 250,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Contribution bullet explicitly states the dual-channel heterogeneous graph approach.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C2",
+          "note_section": "创新",
+          "claim": "TIGER introduces relation-aware self-attention for multiple semantic relationships.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/27777/27592",
+          "source_version": "AAAI 2024 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — main contributions",
+          "pdf_page": 2,
+          "proceedings_page": 250,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Contribution bullet explicitly states relation-aware self-attention.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C3",
+          "note_section": "创新",
+          "claim": "The paper validates TIGER on three datasets and studies prediction plus mechanism-understanding cases.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/27777/27592",
+          "source_version": "AAAI 2024 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — main contributions",
+          "pdf_page": 2,
+          "proceedings_page": 250,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Third contribution is the three-dataset experimental/mechanism analysis.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "M1",
+          "note_section": "关键模块",
+          "claim": "TIGER uses sampled subgraphs centered on drug nodes rather than running the Transformer on the full BKG.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/27777/27592",
+          "source_version": "AAAI 2024 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Method overview",
+          "pdf_page": 2,
+          "proceedings_page": 250,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Introduction/method description explicitly contrasts sampled subgraphs with the whole graph.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "L1",
+          "note_section": "缺点/局限",
+          "claim": "Relation-aware attention is evidence of model focus, not by itself causal or faithful mechanism proof.",
+          "evidence_level": "C",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/27777/27592",
+          "source_version": "AAAI 2024 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Reader audit",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "source_only",
+          "evidence_summary": "Reader interpretation constrained by the actual attention mechanism; no causal intervention is described.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        }
+      ],
+      "version_lock": {
+        "paper_id": "05_TIGER_AAAI2024",
+        "title": "Dual-Channel Learning Framework for Drug-Drug Interaction Prediction via Relation-Aware Heterogeneous Graph Transformer",
+        "method": "TIGER",
+        "venue": "AAAI 2024",
+        "doi": "10.1609/aaai.v38i1.27777",
+        "pages": "249-256",
+        "page_count": 8,
+        "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/27777",
+        "evidence_url": "https://ojs.aaai.org/index.php/AAAI/article/download/27777/27592",
+        "source_version": "AAAI proceedings version",
+        "alternate_titles": [],
+        "retrieved_at": "2026-09-15",
+        "content_sha256": null,
+        "hash_status": "remote source not redistributed/materialized in repository; hash intentionally unset",
+        "mixing_rule": "Do not combine conflicting facts across source versions without explicit reconciliation.",
+        "evidence_page_count": 8,
+        "page_numbering_note": "pdf_page is 1-based within the locked evidence source; proceedings_page is printed conference page when verified."
+      },
+      "negative_facts": {
+        "paper_id": "05_TIGER_AAAI2024",
+        "version": "0.5.0",
+        "purpose": "negative evidence / likely hallucination traps",
+        "negative_facts": [
+          {
+            "id": "N1",
+            "category": "later_protocol",
+            "must_not_claim": "Do not import later DrugBank/TWOSIDES task protocols from papers that reuse TIGER as a baseline.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N2",
+            "category": "causal_attention",
+            "must_not_claim": "Do not call relation-aware attention causal evidence.",
+            "automation": "human_or_semantic_check"
+          }
+        ]
+      },
+      "coverage_spec": {
+        "paper_id": "05_TIGER_AAAI2024",
+        "version": "0.5.0",
+        "required_concepts": [
+          {
+            "concept": "dual channel",
+            "aliases": [
+              "dual-channel",
+              "双通道"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "relation attention",
+            "aliases": [
+              "relation-aware",
+              "关系感知"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "transformer",
+            "aliases": [
+              "Transformer"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "molecular+KG",
+            "aliases": [
+              "molecular graph",
+              "knowledge graph",
+              "BKG"
+            ],
+            "min_alias_matches": 1
+          }
+        ],
+        "policy": "Each concept must be represented by at least one alias; this is a regression guard, not a semantic proof of correctness."
+      }
+    },
+    {
+      "paper_id": "06_ZeroDDI_IJCAI2024",
+      "gold_note": "gold_notes/06_ZeroDDI_IJCAI2024.md",
+      "audit": {
+        "version": "0.5.0",
+        "paper_id": "06_ZeroDDI_IJCAI2024",
+        "audit_status": "v0.5 provenance/contribution audit integrated",
+        "audit_type": "source-verified model-curated",
+        "paper": "ZeroDDI",
+        "sources": [
+          "https://www.ijcai.org/proceedings/2024/671",
+          "https://arxiv.org/abs/2407.00891",
+          "https://github.com/wzy-Sarah/ZeroDDI"
+        ],
+        "verified_contributions": [
+          "Definition and benchmark construction for zero-shot DDI event prediction.",
+          "Biological Semantic Enhanced DDIE Representation Learning.",
+          "Dual-Modal Uniform Alignment for imbalanced zero-shot event learning.",
+          "Application analysis on newly appearing DrugBank event classes."
+        ],
+        "critical_facts": [
+          "Zero-shot means unseen DDI event classes, not unseen drugs.",
+          "The benchmark contains 175 event classes split into 107 seen and 68 unseen classes.",
+          "The paper performs CZSL and GZSL evaluation."
+        ],
+        "corrected_or_removed": [
+          "Explicitly separated unseen-event zero-shot learning from new-drug cold start.",
+          "Added the authors' application analysis using later DrugBank events."
+        ],
+        "rules_applied": [
+          "Contribution-first innovation protocol",
+          "Task formulation verification",
+          "Dataset/metric/source verification",
+          "Case-study hallucination check",
+          "Strong-claim calibration",
+          "Missing-information abstention"
+        ],
+        "human_validation": "not independently human-annotated",
+        "contribution_map": "benchmark/contribution_maps/06_ZeroDDI_IJCAI2024.json",
+        "version_lock": "benchmark/version_locks/06_ZeroDDI_IJCAI2024.json",
+        "negative_facts": "benchmark/negative_facts/06_ZeroDDI_IJCAI2024.json"
+      },
+      "contribution_map": {
+        "paper_id": "06_ZeroDDI_IJCAI2024",
+        "version": "0.5.0",
+        "mapping_policy": "author contribution first; reader decomposition must be explicit",
+        "author_contributions": [
+          {
+            "contribution_id": "C1",
+            "author_claim_paraphrase": "Formulate zero-shot DDI event prediction, propose ZeroDDI, and construct a corresponding dataset",
+            "maps_to_innovation_bullets": [
+              "I1"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C2",
+            "author_claim_paraphrase": "Design biological semantic enhanced DDIE representation learning",
+            "maps_to_innovation_bullets": [
+              "I2"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C3",
+            "author_claim_paraphrase": "Propose dual-modal uniform alignment to address class imbalance and align drug-pair/event semantics",
+            "maps_to_innovation_bullets": [
+              "I3"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C4",
+            "author_claim_paraphrase": "Validate unseen-event detection extensively and analyze later-emerging DrugBank event classes",
+            "maps_to_innovation_bullets": [
+              "I4"
+            ],
+            "reader_decomposition": false
+          }
+        ],
+        "innovation_bullets": [
+          {
+            "innovation_id": "I1",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I2",
+            "mapped_contributions": [
+              "C2"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I3",
+            "mapped_contributions": [
+              "C3"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I4",
+            "mapped_contributions": [
+              "C4"
+            ],
+            "mapping_status": "mapped"
+          }
+        ]
+      },
+      "evidence_ledger": [
+        {
+          "claim_id": "C1",
+          "note_section": "创新",
+          "claim": "ZeroDDI formulates zero-shot DDI event prediction and constructs a corresponding dataset.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2024/0671.pdf",
+          "source_version": "IJCAI 2024 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 6072,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Contribution list states the new ZS-DDIE problem, ZeroDDI, and dataset construction.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C2",
+          "note_section": "创新",
+          "claim": "Biological Semantic Enhanced DDIE Representation Learning is proposed.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2024/0671.pdf",
+          "source_version": "IJCAI 2024 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 6072,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Second contribution describes biological semantic enhancement and substructure-related semantic distillation.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C3",
+          "note_section": "创新",
+          "claim": "Dual-Modal Uniform Alignment is proposed to mitigate class imbalance.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2024/0671.pdf",
+          "source_version": "IJCAI 2024 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 6072,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Third contribution states dual-modal uniform alignment.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "D1",
+          "note_section": "数据集",
+          "claim": "The benchmark uses 107 seen and 68 unseen event classes.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2024/0671.pdf",
+          "source_version": "IJCAI 2024 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Experiments — dataset split",
+          "pdf_page": 5,
+          "proceedings_page": 6075,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Dataset section reports the seen/unseen class split.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "X1",
+          "note_section": "案例分析",
+          "claim": "The application analysis tests later-emerging DrugBank events from v5.1.11 using a model trained from earlier data.",
+          "evidence_level": "A",
+          "source_url": "https://www.ijcai.org/proceedings/2024/0671.pdf",
+          "source_version": "IJCAI 2024 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Zero-Shot DDIE Application Analysis",
+          "pdf_page": 7,
+          "proceedings_page": 6077,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Application analysis uses a later DrugBank version to test newly appearing DDIEs.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        }
+      ],
+      "version_lock": {
+        "paper_id": "06_ZeroDDI_IJCAI2024",
+        "title": "ZeroDDI: A Zero-Shot Drug-Drug Interaction Event Prediction Method with Semantic Enhanced Learning and Dual-modal Uniform Alignment",
+        "method": "ZeroDDI",
+        "venue": "IJCAI 2024",
+        "doi": "10.24963/ijcai.2024/671",
+        "pages": "6071-6079",
+        "page_count": 9,
+        "publisher_url": "https://www.ijcai.org/proceedings/2024/671",
+        "evidence_url": "https://www.ijcai.org/proceedings/2024/0671.pdf",
+        "source_version": "IJCAI proceedings version",
+        "alternate_titles": [],
+        "retrieved_at": "2026-09-15",
+        "content_sha256": null,
+        "hash_status": "remote source not redistributed/materialized in repository; hash intentionally unset",
+        "mixing_rule": "Do not combine conflicting facts across source versions without explicit reconciliation.",
+        "evidence_page_count": 9,
+        "page_numbering_note": "pdf_page is 1-based within the locked evidence source; proceedings_page is printed conference page when verified."
+      },
+      "negative_facts": {
+        "paper_id": "06_ZeroDDI_IJCAI2024",
+        "version": "0.5.0",
+        "purpose": "negative evidence / likely hallucination traps",
+        "negative_facts": [
+          {
+            "id": "N1",
+            "category": "zero_shot_semantics",
+            "must_not_claim": "Do not equate unseen DDI event classes with unseen/new drugs.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N2",
+            "category": "cold_start",
+            "must_not_claim": "Do not relabel ZS-DDIE as new-drug cold-start without source support.",
+            "automation": "human_or_semantic_check"
+          }
+        ]
+      },
+      "coverage_spec": {
+        "paper_id": "06_ZeroDDI_IJCAI2024",
+        "version": "0.5.0",
+        "required_concepts": [
+          {
+            "concept": "unseen event",
+            "aliases": [
+              "unseen event",
+              "unseen DDIE",
+              "未见事件"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "BRL",
+            "aliases": [
+              "Biological Semantic",
+              "BRL"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "DUA",
+            "aliases": [
+              "Dual-Modal Uniform",
+              "DUA"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "seen/unseen",
+            "aliases": [
+              "107",
+              "68"
+            ],
+            "min_alias_matches": 1
+          }
+        ],
+        "policy": "Each concept must be represented by at least one alias; this is a regression guard, not a semantic proof of correctness."
+      }
+    },
+    {
+      "paper_id": "07_MOTOR_AAAI2025",
+      "gold_note": "gold_notes/07_MOTOR_AAAI2025.md",
+      "audit": {
+        "version": "0.5.0",
+        "paper_id": "07_MOTOR_AAAI2025",
+        "audit_status": "v0.5 provenance/contribution audit integrated",
+        "audit_type": "source-verified model-curated",
+        "paper": "MOTOR",
+        "sources": [
+          "https://ojs.aaai.org/index.php/AAAI/article/view/32097"
+        ],
+        "verified_contributions": [
+          "Motif-oriented molecular representation with internal structure, local context and global semantics.",
+          "Iterative co-optimization between representation learning and DDI topology refinement.",
+          "Empirical validation of motif and topology-refinement components."
+        ],
+        "critical_facts": [
+          "The paper evaluates on ZhangDDI, ChCh-Miner and DeepDDI.",
+          "The task is binary DDI prediction under the paper's protocol.",
+          "The work targets both intra-molecular motif representation and incomplete inter-molecular topology."
+        ],
+        "corrected_or_removed": [
+          "Reframed innovation around the exact three-level motif representation plus topology refinement.",
+          "Removed unsupported assumptions about dataset task variants from later papers."
+        ],
+        "rules_applied": [
+          "Contribution-first innovation protocol",
+          "Task formulation verification",
+          "Dataset/metric/source verification",
+          "Case-study hallucination check",
+          "Strong-claim calibration",
+          "Missing-information abstention"
+        ],
+        "human_validation": "not independently human-annotated",
+        "contribution_map": "benchmark/contribution_maps/07_MOTOR_AAAI2025.json",
+        "version_lock": "benchmark/version_locks/07_MOTOR_AAAI2025.json",
+        "negative_facts": "benchmark/negative_facts/07_MOTOR_AAAI2025.json"
+      },
+      "contribution_map": {
+        "paper_id": "07_MOTOR_AAAI2025",
+        "version": "0.5.0",
+        "mapping_policy": "author contribution first; reader decomposition must be explicit",
+        "author_contributions": [
+          {
+            "contribution_id": "C1",
+            "author_claim_paraphrase": "Motif-oriented representation learning that captures motif internal structures, local contexts, and global semantics",
+            "maps_to_innovation_bullets": [
+              "I1"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C2",
+            "author_claim_paraphrase": "Iterative learning that refines DDI topology and drug representations jointly",
+            "maps_to_innovation_bullets": [
+              "I2"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C3",
+            "author_claim_paraphrase": "Extensive real-world experiments and interpretable analysis validate motif/topology design",
+            "maps_to_innovation_bullets": [
+              "I3"
+            ],
+            "reader_decomposition": true
+          }
+        ],
+        "innovation_bullets": [
+          {
+            "innovation_id": "I1",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I2",
+            "mapped_contributions": [
+              "C2"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I3",
+            "mapped_contributions": [
+              "C3"
+            ],
+            "mapping_status": "mapped"
+          }
+        ]
+      },
+      "evidence_ledger": [
+        {
+          "claim_id": "C1",
+          "note_section": "创新",
+          "claim": "MOTOR models motif internal structures, local contexts and global semantics.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/32097/34252",
+          "source_version": "AAAI 2025 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Abstract / Introduction",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "section_exact",
+          "evidence_summary": "Official abstract states the three motif granularity components.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C2",
+          "note_section": "创新",
+          "claim": "MOTOR iteratively refines DDI topology and optimizes drug representations.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/32097/34252",
+          "source_version": "AAAI 2025 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Abstract / Method",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "section_exact",
+          "evidence_summary": "Official abstract explicitly states iterative topology refinement and representation optimization.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "D1",
+          "note_section": "数据集",
+          "claim": "MOTOR is evaluated on three real-world binary DDI datasets.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/32097/34252",
+          "source_version": "AAAI 2025 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Experiments",
+          "pdf_page": null,
+          "proceedings_page": 1106,
+          "locator_precision": "section_exact",
+          "evidence_summary": "Official paper reports three real-world datasets; performance table appears around proceedings page 1106.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "L1",
+          "note_section": "缺点/局限",
+          "claim": "Motif visualization/topology analysis does not by itself prove a biological causal mechanism.",
+          "evidence_level": "C",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/32097/34252",
+          "source_version": "AAAI 2025 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Reader audit",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "source_only",
+          "evidence_summary": "The paper claims interpretable insights but no causal identification protocol is established in the cited evidence.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "X1",
+          "note_section": "案例分析",
+          "claim": "Interpretability analysis centers on motif/topology behavior rather than a separately verified clinical mechanism case.",
+          "evidence_level": "B",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/32097/34252",
+          "source_version": "AAAI 2025 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Interpretability / analysis",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "section_exact",
+          "evidence_summary": "Gold wording is intentionally limited to what the paper demonstrates.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        }
+      ],
+      "version_lock": {
+        "paper_id": "07_MOTOR_AAAI2025",
+        "title": "Motif-Oriented Representation Learning with Topology Refinement for Drug-Drug Interaction Prediction",
+        "method": "MOTOR",
+        "venue": "AAAI 2025",
+        "doi": "10.1609/aaai.v39i1.32097",
+        "pages": "1102-1110",
+        "page_count": 9,
+        "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/32097",
+        "evidence_url": "https://ojs.aaai.org/index.php/AAAI/article/download/32097/34252",
+        "source_version": "AAAI proceedings version",
+        "alternate_titles": [],
+        "retrieved_at": "2026-09-15",
+        "content_sha256": null,
+        "hash_status": "remote source not redistributed/materialized in repository; hash intentionally unset",
+        "mixing_rule": "Do not combine conflicting facts across source versions without explicit reconciliation.",
+        "evidence_page_count": 9,
+        "page_numbering_note": "pdf_page is 1-based within the locked evidence source; proceedings_page is printed conference page when verified."
+      },
+      "negative_facts": {
+        "paper_id": "07_MOTOR_AAAI2025",
+        "version": "0.5.0",
+        "purpose": "negative evidence / likely hallucination traps",
+        "negative_facts": [
+          {
+            "id": "N1",
+            "category": "dataset_import",
+            "must_not_claim": "Do not import later benchmark task definitions into MOTOR.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N2",
+            "category": "mechanism",
+            "must_not_claim": "Do not claim motif visualization proves a biological causal mechanism.",
+            "automation": "human_or_semantic_check"
+          }
+        ]
+      },
+      "coverage_spec": {
+        "paper_id": "07_MOTOR_AAAI2025",
+        "version": "0.5.0",
+        "required_concepts": [
+          {
+            "concept": "motif levels",
+            "aliases": [
+              "internal structure",
+              "local context",
+              "global semantics"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "topology refinement",
+            "aliases": [
+              "Topology Refinement",
+              "拓扑精炼"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "iteration",
+            "aliases": [
+              "iterative",
+              "迭代"
+            ],
+            "min_alias_matches": 1
+          }
+        ],
+        "policy": "Each concept must be represented by at least one alias; this is a regression guard, not a semantic proof of correctness."
+      }
+    },
+    {
+      "paper_id": "08_ExDDI_AAAI2025",
+      "gold_note": "gold_notes/08_ExDDI_AAAI2025.md",
+      "audit": {
+        "version": "0.5.0",
+        "paper_id": "08_ExDDI_AAAI2025",
+        "audit_status": "v0.5 provenance/contribution audit integrated",
+        "audit_type": "source-verified model-curated",
+        "paper": "ExDDI",
+        "sources": [
+          "https://ojs.aaai.org/index.php/AAAI/article/view/34709",
+          "https://arxiv.org/abs/2409.05592",
+          "https://github.com/ZhaoyueSun/ExDDI"
+        ],
+        "verified_contributions": [
+          "Systematic formulation of natural-language DDI explanation generation.",
+          "Comparison of fine-tuning, retrieval and in-context approaches under transductive and inductive settings.",
+          "Empirical finding that richer explanation supervision can improve DDI prediction."
+        ],
+        "critical_facts": [
+          "DDInter and DrugBank provide explanation supervision with different detail levels.",
+          "The paper's S1/S2 inductive naming must be read from the paper rather than imported from other DDI work.",
+          "Generated explanations are not automatically faithful explanations."
+        ],
+        "corrected_or_removed": [
+          "Replaced architecture-centric novelty with the task-level and empirical contributions explicitly stated by the authors.",
+          "Clarified inductive split naming and separated text quality from faithfulness."
+        ],
+        "rules_applied": [
+          "Contribution-first innovation protocol",
+          "Task formulation verification",
+          "Dataset/metric/source verification",
+          "Case-study hallucination check",
+          "Strong-claim calibration",
+          "Missing-information abstention"
+        ],
+        "human_validation": "not independently human-annotated",
+        "contribution_map": "benchmark/contribution_maps/08_ExDDI_AAAI2025.json",
+        "version_lock": "benchmark/version_locks/08_ExDDI_AAAI2025.json",
+        "negative_facts": "benchmark/negative_facts/08_ExDDI_AAAI2025.json"
+      },
+      "contribution_map": {
+        "paper_id": "08_ExDDI_AAAI2025",
+        "version": "0.5.0",
+        "mapping_policy": "author contribution first; reader decomposition must be explicit",
+        "author_contributions": [
+          {
+            "contribution_id": "C1",
+            "author_claim_paraphrase": "Authors state they are first to systematically explore DDI natural-language explanation generation; create ExDDI family and evaluation baselines",
+            "maps_to_innovation_bullets": [
+              "I1"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C2",
+            "author_claim_paraphrase": "Empirical finding: fine-tuning works well transductively but generalizes poorly to unseen drugs; retrieval becomes competitive when both drugs are unseen; general LLMs are weak on molecular inputs",
+            "maps_to_innovation_bullets": [
+              "I2"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C3",
+            "author_claim_paraphrase": "Empirical finding: richer DDInter explanations improve prediction relative to shorter DrugBank explanations",
+            "maps_to_innovation_bullets": [
+              "I3"
+            ],
+            "reader_decomposition": false
+          }
+        ],
+        "innovation_bullets": [
+          {
+            "innovation_id": "I1",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I2",
+            "mapped_contributions": [
+              "C2"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I3",
+            "mapped_contributions": [
+              "C3"
+            ],
+            "mapping_status": "mapped"
+          }
+        ]
+      },
+      "evidence_ledger": [
+        {
+          "claim_id": "C1",
+          "note_section": "创新",
+          "claim": "Authors state they are first to explore the DDI natural-language explanation generation task and create the ExDDI model family/baselines.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/34709/36864",
+          "source_version": "AAAI 2025 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 25229,
+          "locator_precision": "page_exact",
+          "evidence_summary": "First contribution states the new task, ExDDI family, and evaluation tools/baselines.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C2",
+          "note_section": "创新",
+          "claim": "Experiments show fine-tuned models generalize poorly to unseen drugs; fingerprint retrieval becomes competitive when both drugs are unseen; general LLMs are limited on molecular representations.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/34709/36864",
+          "source_version": "AAAI 2025 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 25229,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Second contribution is an empirical generalization finding, not a new architecture claim.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C3",
+          "note_section": "创新",
+          "claim": "Models trained on richer DDInter explanations outperform DrugBank-trained models on prediction tasks.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/34709/36864",
+          "source_version": "AAAI 2025 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 25229,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Third contribution states that richer explanation supervision improves prediction.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "D1",
+          "note_section": "数据集",
+          "claim": "DDInter and DrugBank provide long and short DDI explanations respectively.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/34709/36864",
+          "source_version": "AAAI 2025 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction / Data",
+          "pdf_page": 2,
+          "proceedings_page": 25229,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Paper explicitly states long DDInter and short DrugBank explanation sources.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "L1",
+          "note_section": "缺点/局限",
+          "claim": "Natural-language explanation plausibility is not automatically evidence of prediction faithfulness.",
+          "evidence_level": "C",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/34709/36864",
+          "source_version": "AAAI 2025 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Reader audit",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "source_only",
+          "evidence_summary": "This is a SciRead claim-strength distinction; the paper evaluates explanation quality but does not establish functional faithfulness by default.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        }
+      ],
+      "version_lock": {
+        "paper_id": "08_ExDDI_AAAI2025",
+        "title": "ExDDI: Explaining Drug-Drug Interaction Predictions with Natural Language",
+        "method": "ExDDI",
+        "venue": "AAAI 2025",
+        "doi": "10.1609/aaai.v39i24.34709",
+        "pages": "25228-25236",
+        "page_count": 9,
+        "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34709",
+        "evidence_url": "https://ojs.aaai.org/index.php/AAAI/article/download/34709/36864",
+        "source_version": "AAAI proceedings version",
+        "alternate_titles": [],
+        "retrieved_at": "2026-09-15",
+        "content_sha256": null,
+        "hash_status": "remote source not redistributed/materialized in repository; hash intentionally unset",
+        "mixing_rule": "Do not combine conflicting facts across source versions without explicit reconciliation.",
+        "evidence_page_count": 9,
+        "page_numbering_note": "pdf_page is 1-based within the locked evidence source; proceedings_page is printed conference page when verified."
+      },
+      "negative_facts": {
+        "paper_id": "08_ExDDI_AAAI2025",
+        "version": "0.5.0",
+        "purpose": "negative evidence / likely hallucination traps",
+        "negative_facts": [
+          {
+            "id": "N1",
+            "category": "faithfulness",
+            "must_not_claim": "Do not call generated natural-language explanations faithful solely because they match references.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N2",
+            "category": "split_semantics",
+            "must_not_claim": "Do not import S1/S2 meanings from DDIAgents or PC-DDI; use ExDDI definitions only.",
+            "automation": "human_or_semantic_check"
+          }
+        ]
+      },
+      "coverage_spec": {
+        "paper_id": "08_ExDDI_AAAI2025",
+        "version": "0.5.0",
+        "required_concepts": [
+          {
+            "concept": "natural language explanation",
+            "aliases": [
+              "natural-language",
+              "自然语言解释"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "method families",
+            "aliases": [
+              "ExDDI-S2S",
+              "ExDDI-MT",
+              "retrieval"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "inductive",
+            "aliases": [
+              "unseen drug",
+              "inductive"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "faithfulness caution",
+            "aliases": [
+              "faithful",
+              "plausible rationale",
+              "并不自动"
+            ],
+            "min_alias_matches": 1
+          }
+        ],
+        "policy": "Each concept must be represented by at least one alias; this is a regression guard, not a semantic proof of correctness."
+      }
+    },
+    {
+      "paper_id": "09_KPaths_KDD2025",
+      "gold_note": "gold_notes/09_KPaths_KDD2025.md",
+      "audit": {
+        "version": "0.5.0",
+        "paper_id": "09_KPaths_KDD2025",
+        "audit_status": "v0.5 provenance/contribution audit integrated",
+        "audit_type": "source-verified model-curated",
+        "paper": "K-Paths",
+        "sources": [
+          "https://doi.org/10.1145/3711896.3737011",
+          "https://arxiv.org/abs/2502.13344",
+          "https://github.com/rsinghlab/K-Paths"
+        ],
+        "verified_contributions": [
+          "Training-free, model-agnostic biomedical KG retrieval.",
+          "Diversity-aware adaptation of Yen's K shortest loopless paths.",
+          "A common path interface usable by both LLMs and GNNs."
+        ],
+        "critical_facts": [
+          "The work covers DrugBank, DDInter and PharmacotherapyDB tasks.",
+          "It evaluates zero-shot LLM reasoning and supervised/inductive GNN use.",
+          "Retrieved paths are evidence chains, not experimentally validated biological mechanisms."
+        ],
+        "corrected_or_removed": [
+          "Made path diversity and model-agnostic reuse the central novelty.",
+          "Added a strict distinction between interpretable KG evidence and verified mechanism."
+        ],
+        "rules_applied": [
+          "Contribution-first innovation protocol",
+          "Task formulation verification",
+          "Dataset/metric/source verification",
+          "Case-study hallucination check",
+          "Strong-claim calibration",
+          "Missing-information abstention"
+        ],
+        "human_validation": "not independently human-annotated",
+        "contribution_map": "benchmark/contribution_maps/09_KPaths_KDD2025.json",
+        "version_lock": "benchmark/version_locks/09_KPaths_KDD2025.json",
+        "negative_facts": "benchmark/negative_facts/09_KPaths_KDD2025.json"
+      },
+      "contribution_map": {
+        "paper_id": "09_KPaths_KDD2025",
+        "version": "0.5.0",
+        "mapping_policy": "author contribution first; reader decomposition must be explicit",
+        "author_contributions": [
+          {
+            "contribution_id": "C1",
+            "author_claim_paraphrase": "Training-free, model-agnostic retrieval of structured and biologically meaningful multi-hop KG paths",
+            "maps_to_innovation_bullets": [
+              "I1"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C2",
+            "author_claim_paraphrase": "Diversity-aware adaptation of Yen’s K-shortest loopless paths",
+            "maps_to_innovation_bullets": [
+              "I2"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C3",
+            "author_claim_paraphrase": "Use the same retrieved path interface with both LLMs and GNNs for zero-shot/inductive reasoning and efficient supervised learning",
+            "maps_to_innovation_bullets": [
+              "I3"
+            ],
+            "reader_decomposition": false
+          }
+        ],
+        "innovation_bullets": [
+          {
+            "innovation_id": "I1",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I2",
+            "mapped_contributions": [
+              "C2"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I3",
+            "mapped_contributions": [
+              "C3"
+            ],
+            "mapping_status": "mapped"
+          }
+        ]
+      },
+      "evidence_ledger": [
+        {
+          "claim_id": "C1",
+          "note_section": "创新",
+          "claim": "K-Paths is training-free and model-agnostic, retrieving structured multi-hop paths from biomedical KGs.",
+          "evidence_level": "A",
+          "source_url": "https://arxiv.org/pdf/2502.13344",
+          "source_version": "arXiv full text corresponding to KDD 2025 paper",
+          "source_kind": "arxiv",
+          "paper_section": "Abstract / Introduction",
+          "pdf_page": 1,
+          "proceedings_page": null,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Abstract introduces model-agnostic training-free retrieval.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C2",
+          "note_section": "创新",
+          "claim": "K-Paths uses a diversity-aware adaptation of Yen’s K-shortest loopless paths.",
+          "evidence_level": "A",
+          "source_url": "https://arxiv.org/pdf/2502.13344",
+          "source_version": "arXiv full text corresponding to KDD 2025 paper",
+          "source_kind": "arxiv",
+          "paper_section": "Method / Abstract",
+          "pdf_page": 1,
+          "proceedings_page": null,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Abstract/method identify the diversity-aware Yen adaptation.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C3",
+          "note_section": "创新",
+          "claim": "Retrieved paths can be used by both LLMs and GNNs and support inductive reasoning.",
+          "evidence_level": "A",
+          "source_url": "https://arxiv.org/pdf/2502.13344",
+          "source_version": "arXiv full text corresponding to KDD 2025 paper",
+          "source_kind": "arxiv",
+          "paper_section": "Abstract / Introduction",
+          "pdf_page": 1,
+          "proceedings_page": null,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Paper frames the same path evidence as compatible with LLM and GNN paradigms.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "D1",
+          "note_section": "数据集",
+          "claim": "Evaluation includes DrugBank, DDInter and PharmacotherapyDB.",
+          "evidence_level": "A",
+          "source_url": "https://arxiv.org/pdf/2502.13344",
+          "source_version": "arXiv full text corresponding to KDD 2025 paper",
+          "source_kind": "arxiv",
+          "paper_section": "Dataset summary",
+          "pdf_page": 12,
+          "proceedings_page": null,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Dataset summary lists these tasks/datasets.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "L1",
+          "note_section": "缺点/局限",
+          "claim": "A retrieved KG path is an evidence chain, not experimental proof of a biological mechanism.",
+          "evidence_level": "C",
+          "source_url": "https://arxiv.org/pdf/2502.13344",
+          "source_version": "arXiv full text corresponding to KDD 2025 paper",
+          "source_kind": "arxiv",
+          "paper_section": "Reader audit",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "source_only",
+          "evidence_summary": "SciRead claim-strength calibration; path interpretability must not be strengthened into experimental mechanism validation.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        }
+      ],
+      "version_lock": {
+        "paper_id": "09_KPaths_KDD2025",
+        "title": "K-Paths: Reasoning over Graph Paths for Drug Repurposing and Drug Interaction Prediction",
+        "method": "K-Paths",
+        "venue": "KDD 2025",
+        "doi": "10.1145/3711896.3737011",
+        "pages": "5-16",
+        "page_count": 12,
+        "publisher_url": "https://doi.org/10.1145/3711896.3737011",
+        "evidence_url": "https://arxiv.org/pdf/2502.13344",
+        "source_version": "KDD 2025 publication metadata; arXiv full text used for page locators",
+        "alternate_titles": [],
+        "retrieved_at": "2026-09-15",
+        "content_sha256": null,
+        "hash_status": "remote source not redistributed/materialized in repository; hash intentionally unset",
+        "mixing_rule": "Do not combine conflicting facts across source versions without explicit reconciliation.",
+        "evidence_page_count": 12,
+        "page_numbering_note": "pdf_page is 1-based within the locked evidence source; proceedings_page is printed conference page when verified."
+      },
+      "negative_facts": {
+        "paper_id": "09_KPaths_KDD2025",
+        "version": "0.5.0",
+        "purpose": "negative evidence / likely hallucination traps",
+        "negative_facts": [
+          {
+            "id": "N1",
+            "category": "verified_mechanism",
+            "must_not_claim": "Do not call retrieved KG paths experimentally verified biological mechanisms.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N2",
+            "category": "training",
+            "must_not_claim": "Do not claim the K-Paths retriever requires task-specific training; it is training-free.",
+            "automation": "human_or_semantic_check"
+          }
+        ]
+      },
+      "coverage_spec": {
+        "paper_id": "09_KPaths_KDD2025",
+        "version": "0.5.0",
+        "required_concepts": [
+          {
+            "concept": "training free",
+            "aliases": [
+              "training-free",
+              "训练无关"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "Yen",
+            "aliases": [
+              "Yen",
+              "loopless"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "diversity",
+            "aliases": [
+              "diversity",
+              "多样"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "LLM+GNN",
+            "aliases": [
+              "LLM",
+              "GNN"
+            ],
+            "min_alias_matches": 1
+          }
+        ],
+        "policy": "Each concept must be represented by at least one alias; this is a regression guard, not a semantic proof of correctness."
+      }
+    },
+    {
+      "paper_id": "10_RISE_DDI_AAAI2026",
+      "gold_note": "gold_notes/10_RISE_DDI_AAAI2026.md",
+      "audit": {
+        "version": "0.5.0",
+        "paper_id": "10_RISE_DDI_AAAI2026",
+        "audit_status": "v0.5 provenance/contribution audit integrated",
+        "audit_type": "source-verified model-curated",
+        "paper": "RISE-DDI",
+        "sources": [
+          "https://ojs.aaai.org/index.php/AAAI/article/view/37105",
+          "https://github.com/XiejcSYSU/RISE-DDI"
+        ],
+        "verified_contributions": [
+          "Formulation of informative subgraph extraction as an MDP.",
+          "Deep-RL adaptive subgraph sampler.",
+          "Structure-aware reward combining KG topology and molecular features."
+        ],
+        "critical_facts": [
+          "DrugBank, KEGG and OGB-biokg are evaluated.",
+          "Both transductive and inductive settings are studied.",
+          "The 'agent' is a reinforcement-learning agent, not an LLM agent."
+        ],
+        "corrected_or_removed": [
+          "Centered innovation on learned evidence retrieval rather than generic RL usage.",
+          "Added a guardrail against confusing RL agent with multi-agent/LLM systems."
+        ],
+        "rules_applied": [
+          "Contribution-first innovation protocol",
+          "Task formulation verification",
+          "Dataset/metric/source verification",
+          "Case-study hallucination check",
+          "Strong-claim calibration",
+          "Missing-information abstention"
+        ],
+        "human_validation": "not independently human-annotated",
+        "contribution_map": "benchmark/contribution_maps/10_RISE_DDI_AAAI2026.json",
+        "version_lock": "benchmark/version_locks/10_RISE_DDI_AAAI2026.json",
+        "negative_facts": "benchmark/negative_facts/10_RISE_DDI_AAAI2026.json"
+      },
+      "contribution_map": {
+        "paper_id": "10_RISE_DDI_AAAI2026",
+        "version": "0.5.0",
+        "mapping_policy": "author contribution first; reader decomposition must be explicit",
+        "author_contributions": [
+          {
+            "contribution_id": "C1",
+            "author_claim_paraphrase": "Formulate informative subgraph extraction as an MDP and use deep RL for adaptive query-specific extraction",
+            "maps_to_innovation_bullets": [
+              "I1"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C2",
+            "author_claim_paraphrase": "Design a learnable structure-aware reward integrating KG topology and molecular features",
+            "maps_to_innovation_bullets": [
+              "I2"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C3",
+            "author_claim_paraphrase": "Validate transductive/inductive prediction and visualize extracted subgraphs for interpretability",
+            "maps_to_innovation_bullets": [
+              "I3"
+            ],
+            "reader_decomposition": true
+          }
+        ],
+        "innovation_bullets": [
+          {
+            "innovation_id": "I1",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I2",
+            "mapped_contributions": [
+              "C2"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I3",
+            "mapped_contributions": [
+              "C3"
+            ],
+            "mapping_status": "mapped"
+          }
+        ]
+      },
+      "evidence_ledger": [
+        {
+          "claim_id": "C1",
+          "note_section": "创新",
+          "claim": "RISE-DDI formulates subgraph extraction as an MDP and uses a deep RL agent for adaptive extraction.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37105/41067",
+          "source_version": "AAAI 2026 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 1320,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Contribution text describes MDP formulation and deep-RL extraction.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C2",
+          "note_section": "创新",
+          "claim": "A learnable structure-aware reward combines KG topological context and drug-pair molecular features.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37105/41067",
+          "source_version": "AAAI 2026 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction / Method",
+          "pdf_page": 2,
+          "proceedings_page": 1320,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Contribution/abstract states the reward integrates topology and molecular features.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C3",
+          "note_section": "创新",
+          "claim": "The framework is evaluated in both transductive and inductive settings with extracted-subgraph visualization.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37105",
+          "source_version": "AAAI 2026 proceedings PDF",
+          "source_kind": "official_metadata",
+          "paper_section": "Abstract / Experiments",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "section_exact",
+          "evidence_summary": "Official abstract states both settings, up to 20% improvement, and visualization analyses.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "L1",
+          "note_section": "缺点/局限",
+          "claim": "RISE-DDI uses an RL agent, not an LLM or multi-agent system.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37105/41067",
+          "source_version": "AAAI 2026 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Method",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "section_exact",
+          "evidence_summary": "The sampler is explicitly formulated as a deep reinforcement-learning agent.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "L2",
+          "note_section": "缺点/局限",
+          "claim": "Visualization of an extracted subgraph does not by itself establish causal mechanism faithfulness.",
+          "evidence_level": "C",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37105/41067",
+          "source_version": "AAAI 2026 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Reader audit",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "source_only",
+          "evidence_summary": "SciRead claim-strength calibration.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        }
+      ],
+      "version_lock": {
+        "paper_id": "10_RISE_DDI_AAAI2026",
+        "title": "Informative Subgraph Extraction with Deep Reinforcement Learning for Drug-Drug Interaction Prediction",
+        "method": "RISE-DDI",
+        "venue": "AAAI 2026",
+        "doi": "10.1609/aaai.v40i2.37105",
+        "pages": "1319-1327",
+        "page_count": 9,
+        "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37105",
+        "evidence_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37105/41067",
+        "source_version": "AAAI proceedings version",
+        "alternate_titles": [],
+        "retrieved_at": "2026-09-15",
+        "content_sha256": null,
+        "hash_status": "remote source not redistributed/materialized in repository; hash intentionally unset",
+        "mixing_rule": "Do not combine conflicting facts across source versions without explicit reconciliation.",
+        "evidence_page_count": 9,
+        "page_numbering_note": "pdf_page is 1-based within the locked evidence source; proceedings_page is printed conference page when verified."
+      },
+      "negative_facts": {
+        "paper_id": "10_RISE_DDI_AAAI2026",
+        "version": "0.5.0",
+        "purpose": "negative evidence / likely hallucination traps",
+        "negative_facts": [
+          {
+            "id": "N1",
+            "category": "agent_type",
+            "must_not_claim": "Do not describe the RL extraction agent as an LLM/multi-agent system.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N2",
+            "category": "causal_subgraph",
+            "must_not_claim": "Do not equate extracted-subgraph visualization with causal mechanism proof.",
+            "automation": "human_or_semantic_check"
+          }
+        ]
+      },
+      "coverage_spec": {
+        "paper_id": "10_RISE_DDI_AAAI2026",
+        "version": "0.5.0",
+        "required_concepts": [
+          {
+            "concept": "MDP",
+            "aliases": [
+              "Markov Decision Process",
+              "MDP"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "RL",
+            "aliases": [
+              "reinforcement learning",
+              "RL Agent",
+              "强化学习"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "reward",
+            "aliases": [
+              "structure-aware reward",
+              "reward"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "inductive",
+            "aliases": [
+              "inductive",
+              "归纳"
+            ],
+            "min_alias_matches": 1
+          }
+        ],
+        "policy": "Each concept must be represented by at least one alias; this is a regression guard, not a semantic proof of correctness."
+      }
+    },
+    {
+      "paper_id": "11_PC_DDI_AAAI2026",
+      "gold_note": "gold_notes/11_PC_DDI_AAAI2026.md",
+      "audit": {
+        "version": "0.5.0",
+        "paper_id": "11_PC_DDI_AAAI2026",
+        "audit_status": "v0.5 provenance/contribution audit integrated",
+        "audit_type": "source-verified model-curated",
+        "paper": "PC-DDI",
+        "sources": [
+          "https://ojs.aaai.org/index.php/AAAI/article/view/39229"
+        ],
+        "verified_contributions": [
+          "Authors' claimed first pharmacophore-based DDI prediction framework.",
+          "Spatial Attention Weight Graph Convolution Network.",
+          "Node-removal-based causal-inference procedure for identifying key pharmacophores."
+        ],
+        "critical_facts": [
+          "Five datasets D1-D5 are used with transductive and inductive settings.",
+          "Inductive-S1 is Unknown-Unknown and Inductive-S2 is Unknown-Known in this paper.",
+          "The causal analysis is operationally based on prediction-confidence change after pharmacophore removal."
+        ],
+        "corrected_or_removed": [
+          "Rewrote innovation around the authors' three explicit contributions.",
+          "Kept the authors' causal terminology while explicitly distinguishing it from strict causal identification.",
+          "Expanded the CYP3A4 case study without claiming experimental causal proof."
+        ],
+        "rules_applied": [
+          "Contribution-first innovation protocol",
+          "Task formulation verification",
+          "Dataset/metric/source verification",
+          "Case-study hallucination check",
+          "Strong-claim calibration",
+          "Missing-information abstention"
+        ],
+        "human_validation": "not independently human-annotated",
+        "contribution_map": "benchmark/contribution_maps/11_PC_DDI_AAAI2026.json",
+        "version_lock": "benchmark/version_locks/11_PC_DDI_AAAI2026.json",
+        "negative_facts": "benchmark/negative_facts/11_PC_DDI_AAAI2026.json"
+      },
+      "contribution_map": {
+        "paper_id": "11_PC_DDI_AAAI2026",
+        "version": "0.5.0",
+        "mapping_policy": "author contribution first; reader decomposition must be explicit",
+        "author_contributions": [
+          {
+            "contribution_id": "C1",
+            "author_claim_paraphrase": "Authors state PC-DDI is the first pharmacophore-based DDI framework to their knowledge",
+            "maps_to_innovation_bullets": [
+              "I1"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C2",
+            "author_claim_paraphrase": "Design Spatial Attention Weight Graph Convolution Network integrating pharmacophore position and node features",
+            "maps_to_innovation_bullets": [
+              "I2"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C3",
+            "author_claim_paraphrase": "Apply a causal-inference-inspired node-removal procedure to identify key pharmacophores",
+            "maps_to_innovation_bullets": [
+              "I3"
+            ],
+            "reader_decomposition": false
+          }
+        ],
+        "innovation_bullets": [
+          {
+            "innovation_id": "I1",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I2",
+            "mapped_contributions": [
+              "C2"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I3",
+            "mapped_contributions": [
+              "C3"
+            ],
+            "mapping_status": "mapped"
+          }
+        ]
+      },
+      "evidence_ledger": [
+        {
+          "claim_id": "C1",
+          "note_section": "创新",
+          "claim": "Authors state PC-DDI is the first pharmacophore-based DDI prediction framework to their knowledge.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/39229/43190",
+          "source_version": "AAAI 2026 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 20888,
+          "locator_precision": "page_exact",
+          "evidence_summary": "First contribution makes the attributed first-framework claim.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C2",
+          "note_section": "创新",
+          "claim": "PC-DDI introduces a Spatial Attention Weight Graph Convolution module integrating pharmacophore position and node features.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/39229/43190",
+          "source_version": "AAAI 2026 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": 20888,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Second contribution defines SAWGCN.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C3",
+          "note_section": "创新",
+          "claim": "The paper applies a node-removal/prediction-confidence causal-inference procedure to identify key pharmacophores.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/39229/43190",
+          "source_version": "AAAI 2026 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Introduction / Causal inference module",
+          "pdf_page": 2,
+          "proceedings_page": 20888,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Third contribution uses causal terminology; method operation is separately described to avoid overclaiming strict causal identification.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "X1",
+          "note_section": "案例分析",
+          "claim": "The case study analyzes five CYP3A4-mediated DDI pairs and highlights key pharmacophores.",
+          "evidence_level": "A",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/39229/43190",
+          "source_version": "AAAI 2026 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Case Study",
+          "pdf_page": 7,
+          "proceedings_page": 20893,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Case Study discusses inhibitors/inducers and known CYP3A4/PXR-related pharmacophores.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "L1",
+          "note_section": "缺点/局限",
+          "claim": "The operational causal test is stronger than attention visualization but should not automatically be treated as full statistical causal identification.",
+          "evidence_level": "C",
+          "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/39229/43190",
+          "source_version": "AAAI 2026 proceedings PDF",
+          "source_kind": "official_publisher_pdf",
+          "paper_section": "Reader audit",
+          "pdf_page": null,
+          "proceedings_page": null,
+          "locator_precision": "source_only",
+          "evidence_summary": "SciRead calibrates the strength of the causal claim while preserving the authors terminology.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        }
+      ],
+      "version_lock": {
+        "paper_id": "11_PC_DDI_AAAI2026",
+        "title": "Closer to Biological Mechanism: Drug-Drug Interaction Prediction from the Perspective of Pharmacophore",
+        "method": "PC-DDI",
+        "venue": "AAAI 2026",
+        "doi": "10.1609/aaai.v40i25.39229",
+        "pages": "20887-20895",
+        "page_count": 9,
+        "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/39229",
+        "evidence_url": "https://ojs.aaai.org/index.php/AAAI/article/download/39229/43190",
+        "source_version": "AAAI proceedings version",
+        "alternate_titles": [],
+        "retrieved_at": "2026-09-15",
+        "content_sha256": null,
+        "hash_status": "remote source not redistributed/materialized in repository; hash intentionally unset",
+        "mixing_rule": "Do not combine conflicting facts across source versions without explicit reconciliation.",
+        "evidence_page_count": 9,
+        "page_numbering_note": "pdf_page is 1-based within the locked evidence source; proceedings_page is printed conference page when verified."
+      },
+      "negative_facts": {
+        "paper_id": "11_PC_DDI_AAAI2026",
+        "version": "0.5.0",
+        "purpose": "negative evidence / likely hallucination traps",
+        "negative_facts": [
+          {
+            "id": "N1",
+            "category": "first_claim",
+            "must_not_claim": "Keep the first-framework claim attributed to the authors.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N2",
+            "category": "causal_strength",
+            "must_not_claim": "Describe the node-removal confidence test before interpreting the causal claim; do not silently upgrade it to strict causal identification.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N3",
+            "category": "split_semantics",
+            "must_not_claim": "Inductive-S1 is Unknown-Unknown and S2 is Unknown-Known in this paper.",
+            "automation": "human_or_semantic_check"
+          }
+        ]
+      },
+      "coverage_spec": {
+        "paper_id": "11_PC_DDI_AAAI2026",
+        "version": "0.5.0",
+        "required_concepts": [
+          {
+            "concept": "pharmacophore",
+            "aliases": [
+              "pharmacophore",
+              "药效团"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "SAWGCN",
+            "aliases": [
+              "SAWGCN",
+              "Spatial Attention"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "causal operation",
+            "aliases": [
+              "移除",
+              "node-removal",
+              "prediction confidence",
+              "Importance Score"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "CYP3A4",
+            "aliases": [
+              "CYP3A4"
+            ],
+            "min_alias_matches": 1
+          }
+        ],
+        "policy": "Each concept must be represented by at least one alias; this is a regression guard, not a semantic proof of correctness."
+      }
+    },
+    {
+      "paper_id": "12_DDIAgents_KDD2026",
+      "gold_note": "gold_notes/12_DDIAgents_KDD2026.md",
+      "audit": {
+        "version": "0.5.0",
+        "paper_id": "12_DDIAgents_KDD2026",
+        "audit_status": "v0.5 provenance/contribution audit integrated",
+        "audit_type": "source-verified model-curated",
+        "paper": "DDIAgents",
+        "sources": [
+          "User-provided DDIAgents PDF",
+          "https://github.com/zgs0314/DDIAgents"
+        ],
+        "verified_contributions": [
+          "Mechanism-conditioned knowledge orchestration for DDI prediction.",
+          "Dynamic Context Flow with iteration-varying knowledge-to-expert mapping.",
+          "Dynamic expert instantiation and conclusion-guided iterative refinement.",
+          "Broad cold-start, long-tail, cross-backbone and case-study evaluation."
+        ],
+        "critical_facts": [
+          "DrugBank is multi-class and TWOSIDES is multi-label/ranking under the paper's main protocol.",
+          "A candidate retriever limits the downstream candidate space.",
+          "Mechanism conditioning is largely implicit in LLM planning rather than an explicit supervised mechanism variable."
+        ],
+        "corrected_or_removed": [
+          "Rewrote innovation to reflect the paper's high-level contribution logic rather than generic multi-agent wording.",
+          "Preserved the user's approved detailed note outside the innovation section."
+        ],
+        "rules_applied": [
+          "Contribution-first innovation protocol",
+          "Task formulation verification",
+          "Dataset/metric/source verification",
+          "Case-study hallucination check",
+          "Strong-claim calibration",
+          "Missing-information abstention"
+        ],
+        "human_validation": "not independently human-annotated",
+        "contribution_map": "benchmark/contribution_maps/12_DDIAgents_KDD2026.json",
+        "version_lock": "benchmark/version_locks/12_DDIAgents_KDD2026.json",
+        "negative_facts": "benchmark/negative_facts/12_DDIAgents_KDD2026.json"
+      },
+      "contribution_map": {
+        "paper_id": "12_DDIAgents_KDD2026",
+        "version": "0.5.0",
+        "mapping_policy": "author contribution first; reader decomposition must be explicit",
+        "author_contributions": [
+          {
+            "contribution_id": "C1",
+            "author_claim_paraphrase": "Reframe DDI prediction as mechanism-conditioned knowledge orchestration with dynamically instantiated specialized experts",
+            "maps_to_innovation_bullets": [
+              "I1",
+              "I3"
+            ],
+            "reader_decomposition": true
+          },
+          {
+            "contribution_id": "C2",
+            "author_claim_paraphrase": "Introduce Dynamic Context Flow that routes mechanism-relevant heterogeneous knowledge to experts",
+            "maps_to_innovation_bullets": [
+              "I2"
+            ],
+            "reader_decomposition": false
+          },
+          {
+            "contribution_id": "C3",
+            "author_claim_paraphrase": "Extensive cold-start/long-tail/cross-backbone experiments and case studies demonstrate predictive and agent-level mechanistic value",
+            "maps_to_innovation_bullets": [
+              "I4"
+            ],
+            "reader_decomposition": false
+          }
+        ],
+        "innovation_bullets": [
+          {
+            "innovation_id": "I1",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I2",
+            "mapped_contributions": [
+              "C2"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I3",
+            "mapped_contributions": [
+              "C1"
+            ],
+            "mapping_status": "mapped"
+          },
+          {
+            "innovation_id": "I4",
+            "mapped_contributions": [
+              "C3"
+            ],
+            "mapping_status": "mapped"
+          }
+        ]
+      },
+      "evidence_ledger": [
+        {
+          "claim_id": "C1",
+          "note_section": "创新",
+          "claim": "DDIAgents frames DDI prediction as mechanism-conditioned knowledge orchestration with specialized experts.",
+          "evidence_level": "A",
+          "source_url": "https://arxiv.org/pdf/2606.31085",
+          "source_version": "arXiv:2606.31085v1 for page locators; KDD 2026 metadata separately locked",
+          "source_kind": "arxiv",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": null,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Contribution list frames the problem as mechanism-conditioned knowledge orchestration.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C2",
+          "note_section": "创新",
+          "claim": "Dynamic Context Flow routes mechanism-relevant heterogeneous knowledge to experts.",
+          "evidence_level": "A",
+          "source_url": "https://arxiv.org/pdf/2606.31085",
+          "source_version": "arXiv:2606.31085v1 for page locators; KDD 2026 metadata separately locked",
+          "source_kind": "arxiv",
+          "paper_section": "Introduction — contributions / Dynamic Context Flow",
+          "pdf_page": 2,
+          "proceedings_page": null,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Contribution list names Dynamic Context Flow.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "C3",
+          "note_section": "创新",
+          "claim": "Extensive experiments and case studies support cold-start prediction and agent-level mechanistic reasoning.",
+          "evidence_level": "A",
+          "source_url": "https://arxiv.org/pdf/2606.31085",
+          "source_version": "arXiv:2606.31085v1 for page locators; KDD 2026 metadata separately locked",
+          "source_kind": "arxiv",
+          "paper_section": "Introduction — contributions",
+          "pdf_page": 2,
+          "proceedings_page": null,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Third contribution is empirical validation and case-study insight.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "M1",
+          "note_section": "关键模块",
+          "claim": "The quantitative agent setup uses Qwen2.5, maximum iteration T=3 and m=3 agents.",
+          "evidence_level": "A",
+          "source_url": "https://arxiv.org/pdf/2606.31085",
+          "source_version": "arXiv:2606.31085v1 for page locators; KDD 2026 metadata separately locked",
+          "source_kind": "arxiv",
+          "paper_section": "Implementation",
+          "pdf_page": 6,
+          "proceedings_page": null,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Implementation section reports backbone and iteration/agent settings.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "A1",
+          "note_section": "实验设置",
+          "claim": "Removing Dynamic Knowledge Flow causes the largest ablation drop among listed core components.",
+          "evidence_level": "A",
+          "source_url": "https://arxiv.org/pdf/2606.31085",
+          "source_version": "arXiv:2606.31085v1 for page locators; KDD 2026 metadata separately locked",
+          "source_kind": "arxiv",
+          "paper_section": "Ablation Study",
+          "pdf_page": 7,
+          "proceedings_page": null,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Ablation table/analysis identifies dynamic knowledge as the most consequential removal.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "L1",
+          "note_section": "缺点/局限",
+          "claim": "Authors state limitations including fixed collaboration protocol and limited knowledge-source coverage.",
+          "evidence_level": "A",
+          "source_url": "https://arxiv.org/pdf/2606.31085",
+          "source_version": "arXiv:2606.31085v1 for page locators; KDD 2026 metadata separately locked",
+          "source_kind": "arxiv",
+          "paper_section": "Limitations",
+          "pdf_page": 9,
+          "proceedings_page": null,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Limitations section explicitly states these constraints.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        },
+        {
+          "claim_id": "X1",
+          "note_section": "案例分析",
+          "claim": "The Pirfenidone–Teriflunomide example uses iterative expert re-instantiation and toxicity/liver-focused evidence.",
+          "evidence_level": "A",
+          "source_url": "https://arxiv.org/pdf/2606.31085",
+          "source_version": "arXiv:2606.31085v1 for page locators; KDD 2026 metadata separately locked",
+          "source_kind": "arxiv",
+          "paper_section": "Case Study / appendix trace",
+          "pdf_page": 19,
+          "proceedings_page": null,
+          "locator_precision": "page_exact",
+          "evidence_summary": "Full case trace shows first-round conflict followed by toxicology/regulatory/liver specialists and refined evidence.",
+          "confidence": "high",
+          "verification_status": "verified",
+          "notes": null
+        }
+      ],
+      "version_lock": {
+        "paper_id": "12_DDIAgents_KDD2026",
+        "title": "DDIAgents: Predicting Drug Interactions by a Multi-Agent System with Dynamic Knowledge Flow",
+        "method": "DDIAgents",
+        "venue": "KDD 2026",
+        "doi": "10.1145/3770855.3818959",
+        "pages": "11972-11981",
+        "page_count": 10,
+        "publisher_url": "https://researchportal.hkust.edu.hk/en/publications/ddiagents-predicting-drug-interactions-by-a-multi-agent-system-wi/",
+        "evidence_url": "https://arxiv.org/pdf/2606.31085",
+        "source_version": "Publication metadata locked to KDD 2026; page-level evidence currently locked to arXiv:2606.31085v1 (30 Jun 2026)",
+        "alternate_titles": [
+          "DDIAgents: Mechanism-Conditioned Context Flow for Drug-Drug Interaction Prediction"
+        ],
+        "retrieved_at": "2026-09-15",
+        "content_sha256": null,
+        "hash_status": "remote source not redistributed/materialized in repository; hash intentionally unset",
+        "mixing_rule": "Do not combine conflicting facts across source versions without explicit reconciliation.",
+        "evidence_page_count": 22,
+        "page_numbering_note": "pdf_page is 1-based within the locked evidence source; proceedings_page is printed conference page when verified."
+      },
+      "negative_facts": {
+        "paper_id": "12_DDIAgents_KDD2026",
+        "version": "0.5.0",
+        "purpose": "negative evidence / likely hallucination traps",
+        "negative_facts": [
+          {
+            "id": "N1",
+            "category": "explicit_mechanism",
+            "must_not_claim": "Do not claim there is an explicitly supervised mechanism variable unless a source establishes one.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N2",
+            "category": "retriever_bound",
+            "must_not_claim": "Do not omit the candidate-retriever bottleneck when discussing end-to-end limitations.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N3",
+            "category": "faithfulness",
+            "must_not_claim": "Do not equate agent-generated rationale with faithful explanation without functional evidence.",
+            "automation": "human_or_semantic_check"
+          },
+          {
+            "id": "N4",
+            "category": "version_title",
+            "must_not_claim": "Do not silently mix the arXiv title with the official KDD title without version attribution.",
+            "automation": "human_or_semantic_check"
+          }
+        ]
+      },
+      "coverage_spec": {
+        "paper_id": "12_DDIAgents_KDD2026",
+        "version": "0.5.0",
+        "required_concepts": [
+          {
+            "concept": "orchestration",
+            "aliases": [
+              "knowledge orchestration",
+              "知识编排"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "context flow",
+            "aliases": [
+              "Dynamic Context Flow"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "experts",
+            "aliases": [
+              "Expert Agent",
+              "expert instantiation",
+              "专家"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "iteration",
+            "aliases": [
+              "Conclusion Agent",
+              "Iteration",
+              "迭代"
+            ],
+            "min_alias_matches": 1
+          },
+          {
+            "concept": "retriever",
+            "aliases": [
+              "Candidate Retriever",
+              "Top-5",
+              "Top-20"
+            ],
+            "min_alias_matches": 1
+          }
+        ],
+        "policy": "Each concept must be represented by at least one alias; this is a regression guard, not a semantic proof of correctness."
+      }
+    }
+  ]
+}
